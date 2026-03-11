@@ -1,18 +1,11 @@
+import { memo, type JSX } from "react";
 import type { FilterProps } from "../model/types";
 import styles from "./FilterButton.module.css";
 
-export const FilterButton = <T extends string>({
-  options,
-  currentFilter,
-  onFilter,
-}: FilterProps<T>) => (
+const FilterButtonComponent = <T extends string>({ options, currentFilter, onFilter }: FilterProps<T>) => (
   <div>
     <span>Фильтр</span>
-    <select
-      className={styles.select}
-      value={currentFilter}
-      onChange={(e) => onFilter(e.target.value as T)}
-    >
+    <select className={styles.select} value={currentFilter} onChange={(e) => onFilter(e.target.value as T)}>
       {options.map((option) => (
         <option key={option} value={option}>
           {option}
@@ -21,3 +14,7 @@ export const FilterButton = <T extends string>({
     </select>
   </div>
 );
+
+export const FilterButton = memo(FilterButtonComponent) as <T extends string>(
+  props: FilterProps<T>,
+) => JSX.Element;
