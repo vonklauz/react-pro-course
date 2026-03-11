@@ -1,9 +1,9 @@
-import { TaskList } from "features/taskList"
+import { TaskList } from "features/taskList";
 
 export const TaskWidget = () => {
-    return (
-        <div>
-            <TaskList />
-        </div>
-    )
-}
+  return (
+    <div>
+      <TaskList />
+    </div>
+  );
+};

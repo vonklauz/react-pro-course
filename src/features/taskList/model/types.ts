@@ -1,1 +1,1 @@
-export type Filter = 'all' | 'completed' | 'incomplete';
+export type Filter = "all" | "completed" | "incomplete";
