@@ -4,13 +4,14 @@ import styles from "./TaskList.module.css";
 import { useTasks } from "../model/useTasks";
 import type { Filter } from "../model/types";
 import { FILTER_OPTIONS } from "../model/consts";
+import { useCallback } from "react";
 
 export const TaskList = () => {
   const { tasks, filter, setFilter, removeTask } = useTasks();
 
-  const handleFilterChange = (newFilter: Filter) => {
+  const handleFilterChange = useCallback((newFilter: Filter) => {
     setFilter(newFilter);
-  };
+  }, []);
 
   return (
     <div>

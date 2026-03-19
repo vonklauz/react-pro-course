@@ -1,7 +1,8 @@
 import styles from "./TaskCard.module.css";
 import type { Task } from "../model/types";
+import { memo } from "react";
 
-export const TaskCard = ({ id, title, completed, removeTask }: Task) => {
+export const TaskCard = memo(({ id, title, completed, removeTask }: Task) => {
   return (
     <div className={`${styles.taskWrapper} p-4 bg-white rounded shadow`} key={id}>
       <h3 className="text-lg font-semibold mb-2">{title}</h3>
@@ -17,4 +18,4 @@ export const TaskCard = ({ id, title, completed, removeTask }: Task) => {
       )}
     </div>
   );
-};
+});
