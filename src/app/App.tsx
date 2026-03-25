@@ -1,10 +1,10 @@
-import { TaskPage } from "pages/tasks";
+import { FormsPage } from "pages/forms";
 import "./App.css";
 
 function App() {
   return (
     <>
-      <TaskPage />
+      <FormsPage />
     </>
   );
 }
