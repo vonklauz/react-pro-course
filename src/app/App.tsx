@@ -1,10 +1,13 @@
 import "./App.css";
-import { UseRefPage } from "pages/useRefPage";
+import { AppRouter } from "widgets/appRouter/ui/AppRouter";
+import { AuthProvider } from "shared/features/authRouting";
 
 function App() {
   return (
     <>
-      <UseRefPage />
+      <AuthProvider>
+        <AppRouter />
+      </AuthProvider>
     </>
   );
 }
