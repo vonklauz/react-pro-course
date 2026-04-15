@@ -10,8 +10,8 @@ export const MainPage = () => {
         <a href={token ? "/profile" : "/login"} className="block text-center text-blue-500 hover:underline">
           {token ? "Профиль" : "Войти"}
         </a>
-        <a href="/public" className="block text-center text-blue-500 hover:underline">
-          Публичная страница
+        <a href="/portalShowcase" className="block text-center text-blue-500 hover:underline">
+          Пример работы React Portal
         </a>
       </div>
     );
