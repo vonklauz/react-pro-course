@@ -1,0 +1,29 @@
+.tooltip {
+  position: absolute;
+  padding: 5px 10px;
+  background-color: #333;
+  color: #fff;
+  border-radius: 4px;
+  font-size: 12px;
+  z-index: 1000;
+}
+
+.top {
+  left: anchor(start);
+  bottom: anchor(top);
+}
+
+.left {
+  right: anchor(start);
+  bottom: anchor(bottom);
+}
+
+.bottom {
+  top: anchor(bottom);
+  left: anchor(start);
+}
+
+.right {
+  left: anchor(end);
+  bottom: anchor(bottom);
+}

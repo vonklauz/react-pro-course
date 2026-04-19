@@ -2,6 +2,7 @@ import { ProtectedRoute } from "features/protectedRoute";
 import { LoginPage } from "pages/loginPage";
 import { MainPage } from "pages/mainPage/ui/MainPage";
 import { NotFoundPage } from "pages/notFoundPage";
+import { PortalShowcasePage } from "pages/portalShowcase";
 import { ProfilePage } from "pages/profilePage";
 import { PublicPage } from "pages/publicPage";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
@@ -20,6 +21,7 @@ export const AppRouter = () => {
         {/**  Публичные пути */}
         <Route path="/login" element={<LoginPage />} />
         <Route path="/public" element={<PublicPage />} />
+        <Route path="/portalShowcase" element={<PortalShowcasePage />} />
 
         {/**  404 путь */}
         <Route path="*" element={<NotFoundPage />} />
